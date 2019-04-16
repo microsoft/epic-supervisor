@@ -1,0 +1,4 @@
+--require tshook
+--require source-map-support/register
+--recursive
+src/**/*.test.ts
