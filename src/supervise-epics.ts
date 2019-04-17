@@ -136,5 +136,4 @@ export const superviseEpics = <
 /**
  * A combineEpics-compatible function.
  */
-export const combineEpics = <T extends Epic>(...epics: ReadonlyArray<T>): T =>
-  superviseEpics({}, ...epics) as T;
+export const combineEpics = <T extends Epic>(...epics: T[]): T => superviseEpics({}, ...epics) as T;
