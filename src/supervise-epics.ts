@@ -85,7 +85,7 @@ export const superviseEpics = <
     onError = defaultErrorHandler,
     onRestart = noop,
   }: Partial<ISupervisionOptions<Input, State, Dependencies>>,
-  ...epics: ReadonlyArray<Epic<Input, Output, State, Dependencies>>
+  ...epics: Array<Epic<Input, Output, State, Dependencies>>
 ): Epic<Input, Output, State, Dependencies> => {
   const mergedEpic: Epic<Input, Output, State, Dependencies> = (actions, state, services) =>
     new Observable((subscriber: Subscriber<Output>) => {
