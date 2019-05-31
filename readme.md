@@ -1,5 +1,7 @@
 # @mixer/epic-supervisor
 
+> Project status: this repo is actively maintained and currently used in production code.
+
 [redux-observable](https://github.com/redux-observable/redux-observable) is an RxJS-based side effects module for Redux. Unfortunately, it lacks a built-in way to handle uncaught errors, which by default are unlogged and break all epics in the application. The maintainers [have indicated](https://github.com/redux-observable/redux-observable/issues/94#issuecomment-454968018) that there's no immediate plans to implement a 'first-party' solution for error handling. So, this is ours! This module implements an [Erlang/OTP-style supervisor](http://erlang.org/doc/design_principles/sup_princ.html) pattern for epics. Out of the box it provides a `combineEpics`-compatible function which instruments epics with error logging, and provides an additional `superviseEpics` method which provides additional supervision options for epics.
 
 ```ts
